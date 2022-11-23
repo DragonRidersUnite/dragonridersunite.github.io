@@ -14,3 +14,7 @@ You can edit files [directly on GitHub](https://github.com/DragonRidersUnite/dra
 5. Make changes to the pages, they're written in Markdown
 6. Commit your changes
 7. Open a PR
+
+## License
+
+The code that builds this website and the code snippets within fall under the Unlicense. See [LICENSE](https://github.com/DragonRidersUnite/dragonridersunite.github.io/blob/main/LICENSE) for more details.
