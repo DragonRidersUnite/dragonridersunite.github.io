@@ -12,3 +12,7 @@ Resources to help you build awesome games with [DragonRuby Game Toolkit](https:/
 We believe that DRGTK is a great engine for making games, and we want to share our knowledge to help others make the games of their dreams.
 
 _More to come soon._
+
+## Community Resources
+
+- [Ruby for Dragons](https://ejectdrive.com/Ruby_for_Dragons/) — An unofficial companion to the DragonRuby documentation
