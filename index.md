@@ -5,7 +5,7 @@
 layout: home
 ---
 
-![icon of a red dragon](/red-logo.png)
+<img alt="icon of a red dragon" src="/red-logo.png" style="width: 120px">
 
 Resources to help you build awesome games with [DragonRuby Game Toolkit](https://dragonruby.org/toolkit/game) (DRGTK).
 
