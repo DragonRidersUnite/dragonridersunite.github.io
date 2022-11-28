@@ -8,11 +8,14 @@ Music in DragonRuby GTK games should usually be in the OGG format because of the
 
 Take your OGG file and put it in the `mygame/sounds/` directory. Let's say you have a music file called `forest.ogg` that's the forest music theme for you game.
 
-To start playing that track, you need to specify the music details in the `args.music` hash with a given key:
+To start playing that track at the beginning of your game, you need to specify the music details in the `args.music` hash with a given key:
 
 ``` ruby
 def tick(args)
-  args.audio[:music] = { input: "sounds/forest.ogg", looping: true }
+  # only start it once, not on every tick
+  if args.state.tick_count == 1
+    args.audio[:music] = { input: "sounds/forest.ogg", looping: true }
+  end
 end
 ```
 
