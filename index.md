@@ -13,6 +13,8 @@ We believe that DRGTK is a great engine for making games, and we want to share o
 
 _More to come soon._
 
+[Join us in Discord!](https://discord.dragonruby.org)
+
 ## Community Resources
 
 - [Ruby for Dragons](https://ejectdrive.com/Ruby_for_Dragons/) — An unofficial companion to the DragonRuby documentation
