@@ -18,3 +18,5 @@ You can edit files [directly on GitHub](https://github.com/DragonRidersUnite/dra
 ## License
 
 The code that builds this website and the code snippets within fall under the Unlicense. See [LICENSE](https://github.com/DragonRidersUnite/dragonridersunite.github.io/blob/main/LICENSE) for more details.
+
+The written content is CC0 and in the Public Domain. Any contributions automatically assume that license.
