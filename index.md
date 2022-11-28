@@ -15,6 +15,19 @@ _More to come soon._
 
 [Join us in Discord!](https://discord.dragonruby.org)
 
+## Projects
+
+- [Book](https://book.dragonriders.community) - in-progress book that goes step-by-step on how to build a non-trivual game with DragonRuby
+- [Recipes](/recipes) - code samples with explainations on how to solve common issues
+- [DragonOS](https://dragonridersunite.itch.io/dragon-os) - interactive showcase of DragonRuby GTK games
+- [Scale](https://github.com/dragonRidersUnite/scale) - simple game starter template
+
+## Official Resources
+
+- [Docs](https://docs.dragonruby.org) - API reference, samples, and guides
+
 ## Community Resources
 
 - [Ruby for Dragons](https://ejectdrive.com/Ruby_for_Dragons/) — An unofficial companion to the DragonRuby documentation
+
+[View more on the Awesome DragonRuby list](https://awesome-dragonruby.github.io/awesome-dragonruby/)
