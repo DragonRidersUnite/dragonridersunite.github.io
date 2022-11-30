@@ -113,3 +113,23 @@ end
 ```
 
 That changes the gain of every currently running audio file (e.g. your music that's playing). If you set it in the `args.state.gain` and use that value with a default for your music initialization and sound effects, that code will be all set for the global setting.
+
+## Pause Music on Focus Loss
+
+It may be desirable to pause the music in your game if it's not the active window for the player. Here's how you could accomplish that:
+
+``` ruby
+def tick(args)
+  if args.state.tick_count == 1
+    args.audio[:music] = { input: "sounds/Night.ogg", looping: true, gain: 0.8, pitch: 1.0 }
+  end
+
+  if args.inputs.mouse.has_focus && args.audio[:music].paused
+    args.audio[:music].paused = false
+  elsif !args.inputs.mouse.has_focus && !args.audio[:music].paused
+    args.audio[:music].paused = true
+  end
+end
+```
+
+`args.inputs.mouse.has_focus` returns a boolean as to whether or not the mouse is focused on the window. This lets us check for focus state and then play or pause the music accordingly.
