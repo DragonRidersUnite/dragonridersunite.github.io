@@ -28,6 +28,7 @@ _More to come soon._
 
 ## Community Resources
 
+- [DragonRuby Dispatch Newsletter](http://dragonrubydispatch.com)
 - [Ruby for Dragons](https://ejectdrive.com/Ruby_for_Dragons/) - An unofficial companion to the DragonRuby documentation
 
 [View more on the Awesome DragonRuby list](https://awesome-dragonruby.github.io/awesome-dragonruby/)
