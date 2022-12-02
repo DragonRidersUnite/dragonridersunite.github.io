@@ -25,6 +25,7 @@ _More to come soon._
 ## Official Resources
 
 - [Docs](https://docs.dragonruby.org) - API reference, samples, and guides
+- [Public Roadmap](https://trello.com/b/lx2oPd6h/public-board) - upcoming changes and recently released work in DRGTK
 
 ## Community Resources
 
