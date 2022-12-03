@@ -114,6 +114,23 @@ end
 
 That changes the gain of every currently running audio file (e.g. your music that's playing). If you set it in the `args.state.gain` and use that value with a default for your music initialization and sound effects, that code will be all set for the global setting.
 
+## Changing Play Location
+
+The audio track has a `playtime` attribute that you can read and set to change the location of the audio file.
+
+``` ruby
+def tick(args)
+  if args.state.tick_count == 1
+    args.audio[:track1] = { input: "sounds/t1.ogg", looping: true, gain: 0.8 }
+    # start 10 seconds in
+    args.audio[:track1].playtime = 10
+  end
+
+  # get current playtime
+  puts args.audio[:track1].playtime
+end
+```
+
 ## Pause Music on Focus Loss
 
 It may be desirable to pause the music in your game if it's not the active window for the player. Here's how you could accomplish that:
