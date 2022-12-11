@@ -17,7 +17,7 @@ _More to come soon._
 
 ## Projects
 
-- [Book](https://book.dragonriders.community) - in-progress book that goes step-by-step on how to build a non-trivual game with DragonRuby
+- [Book](https://book.dragonriders.community) - a free book that goes step-by-step on how to build a non-trivial game with DragonRuby
 - [Recipes](/recipes) - code samples with explainations on how to solve common issues
 - [DragonOS](https://dragonridersunite.itch.io/dragon-os) - interactive showcase of DragonRuby GTK games
 - [Scale](https://github.com/dragonRidersUnite/scale) - simple game starter template
