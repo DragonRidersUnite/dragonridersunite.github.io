@@ -1,5 +1,5 @@
 ---
-title: Enumberable
+title: Enumerable
 description: Intermediate-to-advanced usages of methods when working with collections.
 layout: post
 ---
