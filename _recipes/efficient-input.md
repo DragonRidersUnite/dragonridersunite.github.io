@@ -9,7 +9,7 @@ Sometimes you may want to support multiple inputs for your game. Maybe you suppo
 ``` ruby
 CONFIRM_KEYS = [:j, :z, :enter, :space]
 def confirm?(inputs)
-  CONFIRM_KEYS.any? { |k| inputs.keyboard.down.send(k) } ||
+  CONFIRM_KEYS.any? { |k| inputs.keyboard.key_down.send(k) } ||
     (inputs.controller_one.connected && inputs.controller_one.key_down.a)
 end
 
