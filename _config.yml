@@ -32,6 +32,9 @@ collections:
     title: Recipes
     output: true
     permalink: /:collection/:name
+  assets:
+    title: Assets
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
