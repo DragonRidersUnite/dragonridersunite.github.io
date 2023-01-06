@@ -9,8 +9,8 @@ Sometimes you may want to support multiple inputs for your game. Maybe you suppo
 ``` ruby
 CONFIRM_KEYS = [:j, :z, :enter, :space]
 def confirm?(inputs)
-  inputs.controller_one.key_down&.a ||
-    (CONFIRM_KEYS & inputs.keyboard.keys[:down]).any?
+  CONFIRM_KEYS.any? { |k| inputs.keyboard.down.send(k) } ||
+    (inputs.controller_one.connected && inputs.controller_one.key_down.a)
 end
 
 def tick(args)
@@ -24,10 +24,4 @@ A few things on the implementation:
 
 - `CONFIRM_KEYS` won't change in this example, so it's a constant.
 - `inputs.controller_one.key_down&.a` attempts to check the A button on the first controller. If it's not connected, it'll return `nil` and be evaluately as falsy.
-- `(CONFIRM_KEYS & inputs.keyboards.keys[:down]).any?` uses array intersection to check if any of the keys that are down are in the array we set, nifty! Faster than checking all of them separately.
-
-The `args.inputs.keyboard.keys` hash is a great data structure to use as it contains values for all of the key states:
-
-``` ruby
-{ :down => [:enter], :held => [], :down_or_held => [:enter], :up => [] }
-```
+- `CONFIRM_KEYS.any? { |k| inputs.keyboard.down.send(k) }` checks if any of the keys that are down are in the array we set, nifty!
