@@ -37,6 +37,8 @@ What gets drawn:
 
 Change `tile_x` and `tile_y` to render different tiles within the spritesheet.
 
+When you specify the `w` and `h` of the sprite, you can enlarge the slice of the spritesheet we are rendering. Try changing those values too and see what happens.
+
 ## Tile Map
 
 When working with more complex spritesheets, you may want to define a tilemap which specifies the coordinates and size of a given tile in the spritesheet. We'll use a Ruby Hash for this. And we'll animate it by changing the tile every 16 ticks.
