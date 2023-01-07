@@ -81,11 +81,11 @@ def tick(args)
 end
 ```
 
-This image coordinates to those index values of the spritesheet:
+Here's an example image that coordinates to the index values of the tile map for our spritesheet:
 
 ![square of four pixel smiley faces with index vals](/assets/spritesheet-labeled.png)
 
-There are other ways to animate with DragonRuby GTK, but this just shows how you'd use a changing value to get the tile you want from the tile map and then render it. This is more flexible because you could have tiles of different sizes within your spritesheet.
+This is one way to animate with DragonRuby GTK, You change the tile from the tile map and then render it. Using a tile map is more flexible because you could have tiles of different sizes within your spritesheet, which can be handy.
 
 It wouldn't be too much of a stretch to change the keys of our hash to instead be symbols that we could easily reference. Imagine we had a terrain spritesheet:
 
