@@ -61,7 +61,7 @@ def tick(args)
   if args.state.tick_count % 16 == 0
     arg.state.tile_index += 1
     if args.state.tile_index >= 4
-      arg.state.tile_index += 0
+      arg.state.tile_index = 0
     end
   end
 
