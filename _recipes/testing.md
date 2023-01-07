@@ -1,6 +1,6 @@
 ---
 title: Testing
-description: How to write automated tests to verify the functionality of your code.
+description: How to write automated tests to verify the functionality of your game code with DragonRuby Game Toolkit.
 layout: post
 author: Brett Chalupa
 ---
