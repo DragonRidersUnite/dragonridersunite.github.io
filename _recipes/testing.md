@@ -7,7 +7,7 @@ author: Brett Chalupa
 
 Writing code for your game is fun. How about writing code that verifies your code actually works? That's even more fun.
 
-A word of causion: automated tests are a more advanced feature, but one that's quite useful.
+A word of caution: automated tests are a more advanced feature, but one that's quite useful.
 
 DragonRuby Game Toolkit provides functionality right out of the box for writing tests. You'll notice in `mygame/app/` a file called `tests.rb`. That file contains the core foundations for writing tests for your game.
 
