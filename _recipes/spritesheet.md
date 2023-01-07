@@ -6,9 +6,7 @@ layout: post
 
 When making games, it's common to have a spritesheet—a single image that contains multiple sprites within it that you slice out and display. Maybe it's the running animation of your player or a collection of different terrain types. It be be helpful to use spritesheets to group similar images together or reduce the number of files in your game.
 
-Here's how to work with them in DragonRuby Game Toolkit.
-
-The most important part of all of this is that when you render a sprite with DragonRuby GTK, you can specify `tile_x`, `tile_y`, `tile_w`, and `tile_h` in your sprite Hash:
+Let's assume we have an image `sprites/spritesheet.png`, which is a 16x16 pixel image with four tiles in it. The key part of rendering just one tile as a sprite with DragonRuby GTK is to specify `tile_x`, `tile_y`, `tile_w`, and `tile_h` in your sprite Hash:
 
 ``` ruby
 def tick(args)
@@ -26,8 +24,6 @@ def tick(args)
   }
 end
 ```
-
-This takes our image, spritesheet.png, which is a 16x16 pixel image with four tiles in it and renders the bottom left tile.
 
 Here's an enlarged version of the spritesheet:
 
