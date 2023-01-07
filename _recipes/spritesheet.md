@@ -1,6 +1,6 @@
 ---
 title: Spritesheet
-description: Rendering different sprites from the same image file.
+description: Rendering different sprites from the same image file with DragonRuby Game Toolkit.
 layout: post
 ---
 
