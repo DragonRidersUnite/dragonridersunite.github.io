@@ -2,6 +2,7 @@
 title: Metadata
 description: Define and access metadata config values in your game.
 layout: post
+author: Brett Chalupa
 ---
 
 ## Metadata Explained

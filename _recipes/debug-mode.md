@@ -2,6 +2,7 @@
 title: Debug Mode
 description: Improve your development experience by rendering additional info and supporting hotkeys.
 layout: post
+author: Brett Chalupa
 ---
 
 When you're making a game, you may want to code special functionality that only exists for you when you're building your game. This could opening up a leel editor, reloading the game on a key press, or rendering hitboxes. You don't want your players to see these things, so how would you only render it for you while you're making your game?

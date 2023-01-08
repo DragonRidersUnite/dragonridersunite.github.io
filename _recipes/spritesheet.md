@@ -2,6 +2,7 @@
 title: Spritesheet
 description: Rendering different sprites from the same image file with DragonRuby Game Toolkit.
 layout: post
+author: Brett Chalupa
 ---
 
 When making games, it's common to have a spritesheet—a single image that contains multiple sprites within it that you slice out and display. Maybe it's the running animation of your player or a collection of different terrain types. It be be helpful to use spritesheets to group similar images together or reduce the number of files in your game.

@@ -2,6 +2,7 @@
 title: Working with Music
 description: How to play, pause, loop, mute, and control music.
 layout: post
+author: Brett Chalupa
 ---
 
 Music in DragonRuby GTK games should usually be in the OGG format because of the reduced file size compared to WAV files. Because music tracks are longer than sound effects, you want to be efficient with the size of your game that you distribute.

@@ -2,6 +2,7 @@
 title: Enumerable
 description: Intermediate-to-advanced usages of methods when working with collections.
 layout: post
+author: Brett Chalupa
 ---
 
 ## Push Item to Front of Array

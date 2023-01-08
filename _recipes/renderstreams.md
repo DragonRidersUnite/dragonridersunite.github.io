@@ -2,6 +2,7 @@
 title: Renderstreams
 description: Pro feature for recording gameplay as data, which can then be replayed and exported as video.
 layout: post
+author: Brett Chalupa
 ---
 
 A neat Pro feature in  is that you can record the gameplay to a data file that can then be used to replay the game or be output to video.

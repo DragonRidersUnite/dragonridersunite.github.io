@@ -2,6 +2,7 @@
 title: Efficient Input Checking
 description: Quickly check if multiple keys are down, pressed, or released.
 layout: post
+author: Brett Chalupa
 ---
 
 Sometimes you may want to support multiple inputs for your game. Maybe you support WASD and the arrow keys. Maybe you support gamepads too. Giving players choice is important. Here's a way to check for multiple keys at once and the controller:

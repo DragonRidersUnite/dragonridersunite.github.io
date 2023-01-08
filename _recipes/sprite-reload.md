@@ -2,6 +2,7 @@
 title: Sprite Reload
 description: Refresh all sprites in debug mode without having to restart the game.
 layout: post
+author: Brett Chalupa
 ---
 
 DragonRuby Game Toolkit has live reloading of your Ruby code when your game runs in development, which is fantastic. It means quick cycles of making changes and trying them without waiting for your game to compile. DRGTK does not automatically reload your sprites when they change, though. But what if you could quickly reload them yourself?
