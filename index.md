@@ -21,6 +21,7 @@ _More to come soon._
 - [Recipes](/recipes) - code samples with explainations on how to solve common issues
 - [DragonOS](https://dragonridersunite.itch.io/dragon-os) - interactive showcase of DragonRuby GTK games
 - [Scale](https://github.com/dragonRidersUnite/scale) - simple game starter template
+- [Zine](/zine) - community publication
 
 ## Official Resources
 
