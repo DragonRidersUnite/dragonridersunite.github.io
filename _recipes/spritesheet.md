@@ -89,12 +89,12 @@ This is one way to animate with DragonRuby GTK, You change the tile from the til
 It wouldn't be too much of a stretch to change the keys of our hash to instead be symbols that we could easily reference. Imagine we had a terrain spritesheet:
 
 ``` ruby
-  tiles = {
-    :grass => { x: 0, y: 0, w: 180, h: 180 },
-    :mountain => { x: 180, y: 0, w: 180, h: 180 },
-    :water => { x: 0, y: 180, w: 180, h: 180 },
-    :forest => { x: 180, y: 180, w: 180, h: 180 },
-  }
+tiles = {
+  :grass => { x: 0, y: 0, w: 180, h: 180 },
+  :mountain => { x: 180, y: 0, w: 180, h: 180 },
+  :water => { x: 0, y: 180, w: 180, h: 180 },
+  :forest => { x: 180, y: 180, w: 180, h: 180 },
+}
 
 tile = tiles.fetch(:grass)
 ```
