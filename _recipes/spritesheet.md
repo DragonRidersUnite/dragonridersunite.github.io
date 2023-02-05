@@ -14,10 +14,10 @@ def tick(args)
   args.outputs.sprites << {
     path: 'sprites/spritesheet.png',
     # this is the good stuff, we render a portion of our image
-    tile_w: 8,
-    tile_h: 8,
+    tile_w: 180,
+    tile_h: 180,
     tile_x: 0,
-    tile_y: 8,
+    tile_y: 180,
     w: 128, # draw our sprite large!
     h: 128,
     x: args.grid.w / 2 - 64,
@@ -50,17 +50,17 @@ def tick(args)
 
   # here's our tile map!
   tiles = {
-    0 => { x: 0, y: 0, w: 8, h: 8 },
-    1 => { x: 8, y: 0, w: 8, h: 8 },
-    2 => { x: 0, y: 8, w: 8, h: 8 },
-    3 => { x: 8, y: 8, w: 8, h: 8 },
+    0 => { x: 0, y: 0, w: 180, h: 180 },
+    1 => { x: 180, y: 0, w: 180, h: 180 },
+    2 => { x: 0, y: 180, w: 180, h: 180 },
+    3 => { x: 180, y: 180, w: 180, h: 180 },
   }
 
   # change the tile every 16 ticks
   if args.state.tick_count % 16 == 0
-    arg.state.tile_index += 1
+    args.state.tile_index += 1
     if args.state.tile_index >= 4
-      arg.state.tile_index = 0
+      args.state.tile_index = 0
     end
   end
 
@@ -89,12 +89,12 @@ This is one way to animate with DragonRuby GTK, You change the tile from the til
 It wouldn't be too much of a stretch to change the keys of our hash to instead be symbols that we could easily reference. Imagine we had a terrain spritesheet:
 
 ``` ruby
-tiles = {
-  :grass => { x: 0, y: 0, w: 8, h: 8 },
-  :mountain => { x: 8, y: 0, w: 8, h: 8 },
-  :water => { x: 0, y: 8, w: 8, h: 8 },
-  :forest => { x: 8, y: 8, w: 8, h: 8 },
-}
+  tiles = {
+    :grass => { x: 0, y: 0, w: 180, h: 180 },
+    :mountain => { x: 180, y: 0, w: 180, h: 180 },
+    :water => { x: 0, y: 180, w: 180, h: 180 },
+    :forest => { x: 180, y: 180, w: 180, h: 180 },
+  }
 
 tile = tiles.fetch(:grass)
 ```
