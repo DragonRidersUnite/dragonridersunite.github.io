@@ -2,6 +2,7 @@
 layout: page
 title: Zine
 permalink: /zine
+description: Bi-annual community magazine about DragonRuby Game Toolkit.
 image: /assets/dragon-ruby-zine-issue-1-print-cover.jpg
 ---
 

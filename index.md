@@ -11,8 +11,6 @@ Resources to help you build awesome games with [DragonRuby Game Toolkit](https:/
 
 We believe that DRGTK is a great engine for making games, and we want to share our knowledge to help others make the games of their dreams. We also want to see it succeed. The more great games built with it, the better the engine will get.
 
-_More to come soon._
-
 [Join us in Discord!](https://discord.dragonruby.org)
 
 ## Projects
