@@ -7,17 +7,17 @@ author: Brett Chalupa
 
 When making games, it's common to have a spritesheet—a single image that contains multiple sprites within it that you slice out and display. Maybe it's the running animation of your player or a collection of different terrain types. It be be helpful to use spritesheets to group similar images together or reduce the number of files in your game.
 
-Let's assume we have an image `sprites/spritesheet.png`, which is a 16x16 pixel image with four tiles in it. The key part of rendering just one tile as a sprite with DragonRuby GTK is to specify `tile_x`, `tile_y`, `tile_w`, and `tile_h` in your sprite Hash:
+Let's assume we have an image [`sprites/spritesheet.png`](https://github.com/DragonRidersUnite/recipes/blob/main/sprites/spritesheet.png), which is a 16x16 pixel image with four tiles in it. The key part of rendering just one tile as a sprite with DragonRuby GTK is to specify `tile_x`, `tile_y`, `tile_w`, and `tile_h` in your sprite Hash:
 
 ``` ruby
 def tick(args)
   args.outputs.sprites << {
     path: 'sprites/spritesheet.png',
     # this is the good stuff, we render a portion of our image
-    tile_w: 180,
-    tile_h: 180,
+    tile_w: 8,
+    tile_h: 8,
     tile_x: 0,
-    tile_y: 180,
+    tile_y: 8,
     w: 128, # draw our sprite large!
     h: 128,
     x: args.grid.w / 2 - 64,
@@ -50,10 +50,10 @@ def tick(args)
 
   # here's our tile map!
   tiles = {
-    0 => { x: 0, y: 0, w: 180, h: 180 },
-    1 => { x: 180, y: 0, w: 180, h: 180 },
-    2 => { x: 0, y: 180, w: 180, h: 180 },
-    3 => { x: 180, y: 180, w: 180, h: 180 },
+    0 => { x: 0, y: 0, w: 8, h: 8 },
+    1 => { x: 8, y: 0, w: 8, h: 8 },
+    2 => { x: 0, y: 8, w: 8, h: 8 },
+    3 => { x: 8, y: 8, w: 8, h: 8 },
   }
 
   # change the tile every 16 ticks
@@ -90,10 +90,10 @@ It wouldn't be too much of a stretch to change the keys of our hash to instead b
 
 ``` ruby
 tiles = {
-  :grass => { x: 0, y: 0, w: 180, h: 180 },
-  :mountain => { x: 180, y: 0, w: 180, h: 180 },
-  :water => { x: 0, y: 180, w: 180, h: 180 },
-  :forest => { x: 180, y: 180, w: 180, h: 180 },
+  :grass => { x: 0, y: 0, w: 8, h: 8 },
+  :mountain => { x: 8, y: 0, w: 8, h: 8 },
+  :water => { x: 0, y: 8, w: 8, h: 8 },
+  :forest => { x: 8, y: 8, w: 8, h: 8 },
 }
 
 tile = tiles.fetch(:grass)
