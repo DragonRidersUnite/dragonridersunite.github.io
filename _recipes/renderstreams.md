@@ -33,4 +33,4 @@ Using ffmpeg, `dragonruby-replay` can take the `*.render` file and convert it in
 
 ## References
 
-- [Video explainer by Ryan C. Gordon](https://www.youtube.com/watch?v=6DT20eXnT88&t=39)
+- [Video explainer by Ryan C. Gordon](https://www.youtube.com/watch?v=6DT20eXnT88)
