@@ -7,9 +7,9 @@ author: Brett Chalupa
 
 Music in DragonRuby GTK games should usually be in the OGG format because of the reduced file size compared to WAV files. Because music tracks are longer than sound effects, you want to be efficient with the size of your game that you distribute.
 
-Take your OGG file and put it in the `mygame/sounds/` directory. Let's say you have a music file called `forest.ogg` that's the forest music theme for you game.
+Take your OGG file and put it in the `mygame/sounds/` directory. Let's say you have a music file called `forest.ogg` that's the forest music theme for your game.
 
-To start playing that track at the beginning of your game, you need to specify the music details in the `args.music` hash with a given key:
+To start playing that track at the beginning of your game, you need to specify the music details in the `args.audio` hash with a given key:
 
 ``` ruby
 def tick(args)
@@ -24,13 +24,13 @@ The key can be anything, but in this case we set it to `:music`. This matters be
 
 Within your game when developing, you can open the console and check `$gtk.args.audio[:music]` to see the current details about the music track like play position.
 
-[View the official docs on `args.audio`.](http://docs.dragonruby.org.s3-website-us-east-1.amazonaws.com/#--docs---gtk--args#audio-)
+[View the official docs on `args.audio`.](http://docs.dragonruby.org.s3-website-us-east-1.amazonaws.com/#---args-audio-)
 
 ## Checking When a Track is Done
 
 Let's say you have a music track that isn't looping and you want to know when it's done to play another track.
 
-If you check `args.audio[:music]` (or whatever your key is for the track you're playing) and the value returns `nil`, then you know that music track finished played. Here's a snippet of what that'd loop like:
+If you check `args.audio[:music]` (or whatever your key is for the track you're playing) and the value returns `nil`, then you know that music track finished playing. Here's a snippet of what that'd look like:
 
 ``` ruby
 def tick(args)
@@ -72,7 +72,7 @@ end
 
 ## Stopping a Track
 
-You can stop a track by setting it's `args.audio` key value to `nil`. Example:
+You can stop a track by setting its `args.audio` key value to `nil`. Example:
 
 ``` ruby
 def tick(args)
