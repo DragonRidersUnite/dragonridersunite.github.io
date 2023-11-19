@@ -24,7 +24,7 @@ The key can be anything, but in this case we set it to `:music`. This matters be
 
 Within your game when developing, you can open the console and check `$gtk.args.audio[:music]` to see the current details about the music track like play position.
 
-[View the official docs on `args.audio`.](http://docs.dragonruby.org/#---args-audio-)
+[View the official docs on `args.audio`.](https://docs.dragonruby.org/#--audio-\(-args-audio-\))
 
 ## Checking When a Track is Done
 
