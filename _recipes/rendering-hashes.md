@@ -33,7 +33,7 @@ DragonRuby is flexible in what it accepts to those arrays. Two of the types (and
 
 ## Array based rendering
 
-`Array` based allows you to send `Array` objects at outputs. Here's an example Sprite, from the [docs](http://docs.dragonruby.org/#---how-to-render-a-sprite-using-an-array)
+`Array` based allows you to send `Array` objects at outputs. Here's an example Sprite, from the [docs](https://docs.dragonruby.org/#/api/outputs?id=rendering-a-sprite-using-an-array)
 
 ``` ruby
 def tick args
@@ -47,7 +47,7 @@ def tick args
 end
 ```
 
-You can see that the elements of the array at 0, 1, 2 etc correspond to the x, y, width and height values of the sprite. You can be flexible (to a point) on how much data you pass in to the array. [Here's the full set of sprites properties allowed to pass in the array](http://docs.dragonruby.org/#---more-sprite-properties-as-an-array).
+You can see that the elements of the array at 0, 1, 2 etc correspond to the x, y, width and height values of the sprite.
 
 ## Hash based rendering
 
@@ -67,7 +67,7 @@ def tick args
 end
 ```
 
-Many more properties of sprites are allowed to be passed in the `Hash`. [Sprite Hash Properties](https://docs.dragonruby.org/#---rendering-a-sprite-using-a--hash-).
+Many more properties of sprites are allowed to be passed in the `Hash`. [Sprite Hash Properties](https://docs.dragonruby.org/#/api/outputs?id=rendering-a-sprite-using-a-hash).
 
 ## Why prefer Hash over Array based rendering?
 
@@ -77,8 +77,7 @@ There's a readaibility benefit to code that uses `Hash` to represent the primiti
 
 ### More advanced sprite properties available
 
-- [Sprite Hash Properties](https://docs.dragonruby.org/#---rendering-a-sprite-using-a--hash-)
-- [Sprite Array Properties](http://docs.dragonruby.org/#---more-sprite-properties-as-an-array)
+- [Sprite Hash Properties](https://docs.dragonruby.org/#/api/outputs?id=rendering-a-sprite-using-a-hash)
 
 If you'd like to use the more advanced sprite features, you'll need the `Hash` representation anyway.
 
@@ -105,10 +104,10 @@ With `Hash` based rendering, the engine still has to inspect the outputs to dete
 
 DragonRuby ships with a helper method to log any `Array` based rendering usage:
 
-- [warn_array_primitives!](http://docs.dragonruby.org/#-----warn_array_primitives!-)
+- [warn_array_primitives!](https://docs.dragonruby.org/#/api/runtime?id=warn_array_primitives)
 
 Use it to neatly log all your usages, then convert them!
 
 ### Other primitive representations
 
-We didn't touch on [Class based representations](https://docs.dragonruby.org/#---rendering-a-sprite-using-a--class-) of primitives, that can be the subject of a further recipe.
+We didn't touch on [Class based representations](https://docs.dragonruby.org/#/api/outputs?id=rendering-a-solid-using-a-class) of primitives, that can be the subject of a further recipe.
