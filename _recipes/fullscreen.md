@@ -58,3 +58,7 @@ If you wanted to have a setting that persisted, you'd do something like:
 5. call `#set_window_fullscreen` to set the desired state
 
 This functionality is built into [Scale](https://github.com/DragonRidersUnite/scale), the DragonRuby GTK framework, so you can just use that or look at the source to learn how to do this.
+
+For more info on DragonRuby GTK window functions see:
+
+- [DragonRuby Runtime Window Functions](https://docs.dragonruby.org/#/api/runtime?id=window-functions)
