@@ -7,48 +7,54 @@ author: Brett Chalupa
 
 Games that target desktop operating systems often have a setting to display the game in fullscreen mode or windowed mode. This gives players the option to choose what they prefer. It's a good practice to have this option, so let's dig into how to do it with DragonRuby Game Toolkit.
 
-DragonRuby GTK gives us this method change the game window to be fullscreen:
+DragonRuby GTK gives us this method to check whether the game is running on a device where switching between fullscreen and windowed makes sense:
 
-``` ruby
-args.gtk.set_window_fullscreen(true)
+```ruby
+args.gtk.can_resize_window?
 ```
 
-If you want to return to windowed mode, pass in `false`:
+You can expect that on most Destkop devices this would return true, while consoles and mobile devices return false.
+
+From there, we have two methods to change the fullscreen state, one to toggle and one to set the state explicitly:
 
 ``` ruby
-args.gtk.set_window_fullscreen(false)
+args.gtk.toggle_window_fullscreen
+args.gtk.set_window_fullscreen(true/false)
 ```
 
-There's unfortunately no way to query the engine to know whether or not the game is fullscreen. So your best bet is to track this setting yourself in `args.state`. Here's how it would look to have the F key toggle between fullscreen and windowed mode:
+You can also query the engine to see whether it is in fullscreen mode:
+
+``` ruby
+args.gtk.window_fullscreen?
+```
+
+Putting that all together, here is an example allowing the F key toggle between fullscreen and windowed mode, and using `#window_fullscreen?` to display the current state:
 
 ``` ruby
 def tick(args)
-  args.state.fullscreen ||= false
 
   if args.inputs.keyboard.key_down.f
-    args.state.fullscreen = !args.state.fullscreen
-    args.gtk.set_window_fullscreen(args.state.fullscreen)
+    args.gtk.toggle_window_fullscreen
   end
 
   args.outputs.labels << { x: args.grid.w / 2, y: 520, text: "Press F to toggle fullscreen", alignment_enum: 1, size_enum: 8 }
-  args.outputs.labels << { x: args.grid.w / 2, y: 320, text: "args.state.fullscreen: #{args.state.fullscreen}", alignment_enum: 1, size_enum: 4 }
+  args.outputs.labels << { x: args.grid.w / 2, y: 320, text: "fullscreen?: #{args.gtk.window_fullscreen?}", alignment_enum: 1, size_enum: 4 }
 end
 ```
 
 Let's break down what that does:
 
-- We initialize `args.state.fullscreen` to be `false` if it isn't set yet; we'll use this to track the fullscreen state ourselves
-- If the F key is pressed, toggle the value. `!` negates a boolean value, so that'll toggle between true and false.
-- We `#set_window_fullscreen` with the value in `args.state.fullscreen` after we change it
+- If the F key is pressed, toggle fullscreen on the engine.
+- Display a label showing the fullscreen state, using the query function.
 
 That's it! Not too shabby.
 
-If you want to save that setting to a preference file so the setting is remembered when players launch the game again, you'd do something like:
+If you wanted to have a setting that persisted, you'd do something like:
 
 1. set a default value
 2. support toggling the setting
 3. save to a file after the value changes
 4. on game launch, check the save file
-5. load the preference into `args.state.fullscreen` and call `#set_window_fullscreen`
+5. call `#set_window_fullscreen` to set the desired state
 
 This functionality is built into [Scale](https://github.com/DragonRidersUnite/scale), the DragonRuby GTK framework, so you can just use that or look at the source to learn how to do this.
